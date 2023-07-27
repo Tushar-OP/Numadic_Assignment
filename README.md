@@ -13,7 +13,7 @@ The Vehicle Asset Report API is a Python script that generates an Excel report c
 
 1. Clone the repository or download the files from the GitHub repository.
 
-2. Place the zipped folder (NU-raw-location-dump.zip) and the Trip-Info.csv file in the "data" folder inside the project directory.
+2. Place the un-zipped "data" folder inside the project directory.
 
 3. Open a terminal or command prompt and navigate to the project directory.
 
@@ -21,3 +21,11 @@ The Vehicle Asset Report API is a Python script that generates an Excel report c
 
    ```bash
    uvicorn main:app --reload
+
+1. The FastAPI server will start running at http://localhost:8000. You can access the API documentation at http://localhost:8000/docs or http://localhost:8000/redoc.
+
+2. To generate the asset report, make a POST request to the /generate_report endpoint with the desired start and end times in epoch format as query parameters.
+
+3. The API will process the data, compute metrics, and generate an Excel report named "report_<start_time>_<end_time>.xlsx" in the project directory.
+
+4. Download and open the file using Microsoft Excel or any compatible spreadsheet software to view the asset report.
