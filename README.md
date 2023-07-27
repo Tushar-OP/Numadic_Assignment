@@ -13,11 +13,19 @@ The Vehicle Asset Report API is a Python script that generates an Excel report c
 
 1. Clone the repository or download the files from the GitHub repository.
 
-2. Place the un-zipped "data" folder inside the project directory.
+2. Place the un-zipped folder NU-raw-location-dump.zip (data\NU-raw-location-dump\EOL-dump) and the Trip-Info.csv file in the "data" folder inside the project directory.
+```bash
+   data
+   ├── Trip-Info.csv
+   └── NU-raw-location-dump
+      └── EOL-dump
+         ├── BR01GF0281.csv
+         └── ...
+```
 
-3. Open a terminal or command prompt and navigate to the project directory.
+4. Open a terminal or command prompt and navigate to the project directory.
 
-4. Run the FastAPI web API using the following command:
+5. Run the FastAPI web API using the following command:
 
    ```bash
    uvicorn main:app --reload
