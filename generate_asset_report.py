@@ -91,7 +91,7 @@ def generate_asset_report(start_time, end_time):
         asset_report_data['Number of Trips Completed'].append(len(trip_info_for_current_vehicle.index))
         asset_report_data['Average Speed'].append(vehicle_data_filtered['spd'].mean())
         asset_report_data['Transporter Name'].append(', '.join(trip_info_for_current_vehicle['transporter_name'].unique()))
-        asset_report_data['Number of Speed Violations'].append(len(vehicle_data_filtered[(vehicle_data_filtered['harsh_acceleration'] == True) | (vehicle_data_filtered['hbk'] == True) | (vehicle_data_filtered['osf'] == True)].index))
+        asset_report_data['Number of Speed Violations'].append(len(vehicle_data_filtered[vehicle_data_filtered['osf'] == True].index))
 
     # Create a DataFrame from the asset_report_data dictionary
     asset_report_df = pd.DataFrame(asset_report_data)
